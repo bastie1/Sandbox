@@ -17,6 +17,8 @@ function ageConversor(ageInDays) {
 let ageInDays = 30;
 ageConversor(ageInDays); // Ano(s): 0; Mes(es): 1; Dia(s): 0
 
+/* Pensar numa forma de considerar o decorrer do tempo nesta função (das 7h às 7h, passaram-se 24h, mas a função, no momento,
+ * não suporta essa ideia, devido à lógica que nela apliquei) */
 function gameTime(hoursMinutesValues){
     let gameDurationHour = hoursMinutesValues[2] - hoursMinutesValues[0];
     let gameDurationMinute = hoursMinutesValues[3] - hoursMinutesValues[1];
@@ -29,11 +31,11 @@ console.log(gameTime(x));
 
 
 function tabuadaDo5(){
-    let int = 5
+    let int = 5;
     for (let i = 0; i <= 10; i++) {
-        let result = int * i
-        console.log(result)
+        let result = int * i;
+        console.log(result);
     }
 }
 
-tabuadaDo5()
+tabuadaDo5();

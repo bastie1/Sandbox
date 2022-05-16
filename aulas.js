@@ -9,18 +9,19 @@ não sendo preciso declarar numa variável a sua espécie: se string, se boolean
 a própria linguagem interpreta a informação recebida e entrega o quanto solicitado, como no exemplo abaixo. 
 Isso é bom e ruim ao mesmo tempo, devo explorar os motivos */
 
+// É possível declarar múltiplas variáveis utilizando apenas um let/const statement. Cada declaração é separada por vírgula.
+let multipleVars = 1, var1 = 2, var2 = 3;
+
 let numero = 1.85
 console.log(numero) // 1.85
 
 // É possível declarar variáveis vazias e atribuir valores a elas posteriormente, da seguinte forma
-
 let emptyVar
 emptyVar = 'notEmpty'
 console.log(emptyVar) // notEmpty
 
 // Var e let são diferentes, mas por quê?
 // Pois é possível redeclarar variáveis utilizando var, mas não é possível utilizando let ou const
-
 var a = 9
 var a = 3
 
@@ -42,8 +43,8 @@ console.log(A,B) // 3 1
 
 /* RESPOSTA
 Esse desafio mostra que DECLARAR variáveis é diferente de ATRIBUIR VALORES(datatypes) a elas */
-/*
-let A = 1 // Aqui eu declarei as variáveis e atribui a um valor (integer) a duas delas (A,B)
+
+/* let A = 1
 let B = 3 
 let C // Aqui eu somente declarei outras variáveis, sem valores atribuídos (C,D)
 let D
@@ -64,7 +65,7 @@ let B = 3
 let C
 
 C = A // C = 1
-A = B // A = 3
+A = B // A = 3 (o código é lido de cima para baixo, então, neste momento, A = 3 pois B = 3)
 B = C // B = 1
 
 // Inicializar as variáveis e ao fim do programa seus valores devem ser printados na tela de forma invertida (o valor de uma variável em outra)
@@ -95,7 +96,7 @@ let A = 10
 let B = 5
 
 let C = (A + B)/2
-console.log(C) // 7.5
+console.log(C) // 7.5 */
 
 
 /* Desafio 6 - Declarar uma variável que guarde o nome de uma pessoa e que printe na tela
@@ -134,8 +135,8 @@ let array = [1, null, false, "lala",
     { 
         Nome: "array", 
         Tipo: { 
-            diversificadaEmTipos: true, 
-            tipada: false,
+            label1: true, 
+            label2: false,
         }
     }
 ]
@@ -150,7 +151,7 @@ console.log(array)
 
 // Numa array multidimensional podem estar contidas outras arrays
 let array2d = [[1,2], [3,5], [4,6], [7,9]]
-console.log(array2d[1][0]) // 3 //É possível acessar elementos de uma array dentro de outra array com essa sintaxe: a array na posição 1 contém "3" como elemnento na posição 0
+console.log(array2d[1][0]) // 3 //É possível acessar elementos de uma array dentro de outra array conforme essa sintaxe (a array na posição 1 contém "3" como elemento na posição 0)
 
 array2d.push([11, 14]) // A função push() inclui elementos à partir da última posição da array
 console.log(array2d) // [...[11,14]]
@@ -158,14 +159,14 @@ console.log(array2d) // [...[11,14]]
 array2d.pop() // A função pop() remove o último elemento da array e o retorna
 console.log(array2d) // [...[7,9]] Mostra apenas a array sem retornar o elemento removido
 
-/* let returnRemovedElement = array2d.pop() // Essa é uma forma de retornar o elemento removido: armazenando-o numa variável
-console.log(array2d) // [4,6] */
+let returnRemovedElement = array2d.pop() // Essa é uma forma de retornar o elemento removido: armazenando-o numa variável
+console.log(array2d) // [4,6] 
 
 array2d.shift() // Remove o primeiro elemento da array e o retorna
 console.log(array2d) // [[3,5]...] Mostra apenas a array sem retornar o elemento removido
 
-/* let returnShiftedElement = array2d.shift() // Retorna o primeiro elemento da array
-console.log(returnShiftedElement) // [1,2] */
+let returnShiftedElement = array2d.shift() // Retorna o primeiro elemento da array
+console.log(returnShiftedElement) // [1,2]
 
 array2d.unshift([1,2]) // Inclui elementos à partir da primeira posição da array
 console.log(array2d) // [[1,2]...]
@@ -187,6 +188,7 @@ function somar(numeroA, numeroB){ //Corpo da função: entre parênteses estão 
 
 console.log(somar(1,5)) // 6
 
+
 let _numeroA = 4
 let _numeroB = 6
 
@@ -196,3 +198,8 @@ function mediana(_numeroA, _numeroB){
 }
 
 console.log(mediana(4,6)) // 5
+
+
+let multipleValuesVar = 'example1', multipleValuesVar2 = 'example2', multipleValuesVar3 = 'example3'; 
+
+console.log(multipleValuesVar2)
