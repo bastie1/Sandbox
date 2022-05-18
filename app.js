@@ -29,7 +29,7 @@ function gameTime(hoursMinutesValues){
 let x = [7,7,7,7]; // Output deve ser 24h, preciso aprefeiçoar o código para que isso aconteça
 console.log(gameTime(x));
 
-
+// Tabuada do 5
 function tabuadaDo5(){
     let int = 5;
     for (let i = 0; i <= 10; i++) {
@@ -39,3 +39,36 @@ function tabuadaDo5(){
 }
 
 tabuadaDo5();
+
+// Quadrado de pares
+function pairSquare(x){
+    let num = x
+    if (num <= 5 || num > 2000){
+        console.log("Esta não é uma entrada válida.");
+    } else {
+        for (let i = 2; i <= num; i = i + 2) {
+            let square = num * num;
+            console.log(square);
+        }
+    }
+}
+pairSquare(6)
+
+// Verifica se um número é primo
+function verificaPrimo(n){
+    for(let i=2; i<n; i++){
+        if(n%i==0){
+            return false;
+        } else {
+            return true;
+        }
+    }
+}
+
+// Retorna apenas números primos
+let array = [1,2,3,4,5,6,7,8,9,73];
+for(let i=0; i<array.length; i++){
+    if(verificaPrimo(array[i])){
+        console.log(array[i])
+    }
+}
