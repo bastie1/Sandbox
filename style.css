@@ -1,0 +1,38 @@
+/* Seletores - é possível selecionar um elemento HTML específico segundo a seguinte sintaxe */
+.lista ul li {
+  /* Quero modificar o elemento <li>, contido no elemento <ul>, contido num <nav> cuja classe é "lista" */
+  color: #187423;
+}
+
+/* Nenhuma alteração será realizada nos casos abaixo, pois o código acima possui maior especificidade */
+.lista {
+  color: red;
+}
+
+.lista ul {
+  color: red;
+}
+
+nav {
+  color: red;
+}
+
+ul {
+  color: red;
+}
+
+li {
+  color: red;
+}
+
+nav ul li {
+  color: red; /* Neste caso, a classe "lista" da tag <nav> é mais específica do que a própria tag */
+}
+
+body {
+  color: red;
+}
+
+* {
+  color: red;
+}
