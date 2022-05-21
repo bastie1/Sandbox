@@ -1,5 +1,5 @@
 function ageConversor(ageInDays) {
-    let daysToYears = age / 365;
+    let daysToYears = ageInDays / 365;
     let yearsToMonths;
     let monthsToDays;
     const dayToYearsInt = Math.trunc(daysToYears);
@@ -77,3 +77,39 @@ for(let i=0; i<array.length; i++){
         console.log(array[i])
     }
 }
+
+
+/* FIXME: (Aprimore) Leia um número inteiro que representa um código de DDD para discagem interurbana. Em seguida, informe à qual cidade o DDD pertence, considerando os seguintes DDDs:
+ * 61 = Brasilia; 71 = Salvador; 11 - Sao Paulo; 21 = Rio de Janeiro; 32 = Juiz de Fora; 19 = Campinas; 27 = Vitoria; 31 = Belo Horizonte 
+ * Obs.: Se a entrada for qualquer outro DDD que não esteja presente na tabela acima, o programa deverá informar: “DDD nao cadastrado”*/
+
+function identificaNumeroDDD(int) {
+
+    int === 11
+        ? console.log("Sao Paulo")
+        : int === 19
+        ? console.log("Campinas")
+        : int === 21
+        ? console.log("Rio de Janeiro")
+        : int === 27
+        ? console.log("Vitoria")
+        : int === 31
+        ? console.log("Belo Horizonte")
+        : int === 32
+        ? console.log("Juiz de Fora")
+        : int === 61
+        ? console.log("Brasilia")
+        : int === 71
+        ? console.log("Salvador")
+        : console.log("DDD nao cadastrado");
+}
+
+identificaNumeroDDD(11)
+
+/* Faça um Programa que peça as 4 notas bimestrais e mostre a média aritmética delas, usando listas (arrays). */
+
+/* Faça um programa que sorteie 10 números aleatórios entre 0 e 100 e imprima:
+A) o maior número sorteado;
+B) o menor número sorteado;
+C) a média dos números sorteados;
+D) a soma dos números sorteados. */
