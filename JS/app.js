@@ -79,10 +79,11 @@ for(let i=0; i<array.length; i++){
 }
 
 
-/* FIXME: (Aprimore) Leia um número inteiro que representa um código de DDD para discagem interurbana. Em seguida, informe à qual cidade o DDD pertence, considerando os seguintes DDDs:
+/* Leia um número inteiro que representa um código de DDD para discagem interurbana. Em seguida, informe à qual cidade o DDD pertence, considerando os seguintes DDDs:
  * 61 = Brasilia; 71 = Salvador; 11 - Sao Paulo; 21 = Rio de Janeiro; 32 = Juiz de Fora; 19 = Campinas; 27 = Vitoria; 31 = Belo Horizonte 
  * Obs.: Se a entrada for qualquer outro DDD que não esteja presente na tabela acima, o programa deverá informar: “DDD nao cadastrado”*/
 
+// Utilizando o operador ternário
 function identificaNumeroDDD(int) {
 
     int === 11
@@ -105,6 +106,42 @@ function identificaNumeroDDD(int) {
 }
 
 identificaNumeroDDD(11)
+
+// Utilizando SWITCH/CASE
+function identificaNumeroDDD(int) {
+  switch (int) {
+    case 11:
+      console.log("Sao Paulo")
+      break;
+    case 19:
+        console.log("Campinas")
+        break;
+    case 21:
+        console.log("Rio de Janeiro")
+        break;
+    case 27:
+        console.log("Vitoria")
+        break;
+    case 31:
+        console.log("Belo Horizonte")
+        break;
+    case 32:
+        console.log("Juiz de Fora")
+        break;
+    case 61:
+        console.log("Brasilia")
+        break;
+    case 71:
+        console.log("Salvador")
+        break;
+    default:
+        console.log("DDD nao cadastrado")
+        break;
+  }
+}
+
+identificaNumeroDDD(11) // Sao Paulo
+
 
 /* Faça um Programa que peça as 4 notas bimestrais e mostre a média aritmética delas, usando listas (arrays). */
 
