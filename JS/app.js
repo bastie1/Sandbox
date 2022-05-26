@@ -1,3 +1,4 @@
+// FIXME: Parou de funcionar repentinamente kksjk
 function ageConversor(ageInDays) {
     let daysToYears = ageInDays / 365;
     let yearsToMonths;
@@ -7,23 +8,42 @@ function ageConversor(ageInDays) {
     const monthsToDaysInt = Math.ceil(monthsToDays);
 
     console.log("Ano(s): " + dayToYearsInt);
-
+    
     yearsToMonths = (daysToYears - Math.trunc(daysToYears)) * 12;
-    ageInDays === 30 
+    // switch (ageInDays === 30) {
+      //   case true:
+      //     console.log("Mes(es): " + 1);
+      //     break;
+      //   case false:
+      //     console.log("Mes(es): " + yearsToMonthsInt);
+      //     break;
+    // }
+    // console.log(yearsToMonthsInt)
+    console.log(yearsToMonthsInt) // NaN
+    ageInDays == 30 
     ? console.log("Mes(es): " + 1) 
     : console.log("Mes(es): " + yearsToMonthsInt);
 
     monthsToDays = (yearsToMonths - Math.trunc(yearsToMonths)) * 30;
-    ageInDays === 30 
+    // switch (ageInDays === 30) {
+    //   case true:
+    //     console.log("Dia(s): " + 0);
+    //     break;
+    //   case false:
+    //     console.log("Dia(s): " + monthsToDaysInt);
+    //     break;
+    // }
+    // console.log(monthsToDaysInt)
+    console.log(monthsToDaysInt) // NaN
+    ageInDays == 30 
     ? console.log("Dia(s): " + 0) 
     : console.log("Dia(s): " + monthsToDaysInt);
 }
 
-let ageInDays = 30;
-ageConversor(ageInDays); // Ano(s): 0; Mes(es): 1; Dia(s): 0
+ageConversor(9291); // Ano(s): 25; Mes(es): NaN; Dia(s): NaN
 
 /* FIXME: Pensar numa forma de considerar o decorrer do tempo nesta função (das 7h às 7h, passaram-se 24h, mas a função, no momento,
- * não suporta essa ideia, devido à lógica que nela apliquei) */
+ * não suporta essa ideia, devido à lógica nela aplicada) */
 function gameTime(hoursMinutesValues){
     let gameDurationHour = hoursMinutesValues[2] - hoursMinutesValues[0];
     let gameDurationMinute = hoursMinutesValues[3] - hoursMinutesValues[1];
@@ -114,33 +134,47 @@ function identificaNumeroDDD(int) {
       console.log("Sao Paulo")
       break;
     case 19:
-        console.log("Campinas")
-        break;
+      console.log("Campinas")
+      break;
     case 21:
-        console.log("Rio de Janeiro")
-        break;
+      console.log("Rio de Janeiro")
+      break;
     case 27:
-        console.log("Vitoria")
-        break;
+      console.log("Vitoria")
+      break;
     case 31:
-        console.log("Belo Horizonte")
-        break;
+      console.log("Belo Horizonte")
+      break;
     case 32:
-        console.log("Juiz de Fora")
-        break;
+      console.log("Juiz de Fora")
+      break;
     case 61:
-        console.log("Brasilia")
-        break;
+      console.log("Brasilia")
+      break;
     case 71:
-        console.log("Salvador")
-        break;
+      console.log("Salvador")
+      break;
     default:
-        console.log("DDD nao cadastrado")
-        break;
+      console.log("DDD nao cadastrado")
+      break;
   }
 }
 
 identificaNumeroDDD(11) // Sao Paulo
+
+let j1 = 0, j2 = 0;
+
+switch (j1 > 0) {
+  case true:
+    console.log("Jogador 1 marcou ponto");
+    break;
+  case (j2 > 0):
+    console.log("Jogador 2 marcou ponto");
+    break;
+  default:
+    console.log("Ninguém marcou ponto");
+    break;         
+}
 
 
 /* Faça um Programa que peça as 4 notas bimestrais e mostre a média aritmética delas, usando listas (arrays). */
