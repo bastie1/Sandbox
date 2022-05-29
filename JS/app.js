@@ -1,46 +1,27 @@
-// FIXME: Parou de funcionar repentinamente kksjk
+// Leia um valor inteiro correspondente à idade de uma pessoa em dias e informe-a em anos, meses e dias
+// Valores: ano = 365 dias, mês = 30 dias
 function ageConversor(ageInDays) {
     let daysToYears = ageInDays / 365;
     let yearsToMonths;
     let monthsToDays;
-    const dayToYearsInt = Math.trunc(daysToYears);
-    const yearsToMonthsInt = Math.trunc(yearsToMonths);
-    const monthsToDaysInt = Math.ceil(monthsToDays);
 
-    console.log("Ano(s): " + dayToYearsInt);
+    console.log(`Ano(s): ${Math.trunc(daysToYears)}`);
     
     yearsToMonths = (daysToYears - Math.trunc(daysToYears)) * 12;
-    // switch (ageInDays === 30) {
-      //   case true:
-      //     console.log("Mes(es): " + 1);
-      //     break;
-      //   case false:
-      //     console.log("Mes(es): " + yearsToMonthsInt);
-      //     break;
-    // }
-    // console.log(yearsToMonthsInt)
-    console.log(yearsToMonthsInt) // NaN
+
     ageInDays == 30 
     ? console.log("Mes(es): " + 1) 
-    : console.log("Mes(es): " + yearsToMonthsInt);
+    : console.log(`Mes(es): ${Math.trunc(yearsToMonths)}`);
 
     monthsToDays = (yearsToMonths - Math.trunc(yearsToMonths)) * 30;
-    // switch (ageInDays === 30) {
-    //   case true:
-    //     console.log("Dia(s): " + 0);
-    //     break;
-    //   case false:
-    //     console.log("Dia(s): " + monthsToDaysInt);
-    //     break;
-    // }
-    // console.log(monthsToDaysInt)
-    console.log(monthsToDaysInt) // NaN
+    
     ageInDays == 30 
     ? console.log("Dia(s): " + 0) 
-    : console.log("Dia(s): " + monthsToDaysInt);
+    : console.log(`Dia(s): ${Math.ceil(monthsToDays)}`);
 }
 
-ageConversor(9291); // Ano(s): 25; Mes(es): NaN; Dia(s): NaN
+ageConversor(30); // Ano(s): 0; Mes(es): 1; Dia(s): 0
+
 
 /* FIXME: Pensar numa forma de considerar o decorrer do tempo nesta função (das 7h às 7h, passaram-se 24h, mas a função, no momento,
  * não suporta essa ideia, devido à lógica nela aplicada) */
@@ -65,6 +46,7 @@ function tabuadaDo5(){
 
 tabuadaDo5();
 
+
 // FIXME: Quadrado de pares
 function pairSquare(x){
     let num = x
@@ -78,6 +60,7 @@ function pairSquare(x){
     }
 }
 pairSquare(6)
+
 
 // Verifica se um número é primo
 function verificaPrimo(n){
@@ -162,6 +145,8 @@ function identificaNumeroDDD(int) {
 
 identificaNumeroDDD(11) // Sao Paulo
 
+
+
 let j1 = 0, j2 = 0;
 
 switch (j1 > 0) {
@@ -184,3 +169,26 @@ A) o maior número sorteado;
 B) o menor número sorteado;
 C) a média dos números sorteados;
 D) a soma dos números sorteados. */
+
+// Function scopes
+var p = 5; 
+
+function func() {
+  var p = 9;
+
+  function decl() { 
+    console.log(p);
+  };
+
+  var expr = function() { 
+    console.log(p);
+  };
+
+  var cons = new Function('\tconsole.log(p);');
+
+  decl();
+  expr();
+  cons();
+}
+
+func();
